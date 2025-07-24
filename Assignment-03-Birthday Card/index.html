@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday!</title>
+  <style>
+    body {
+      background: linear-gradient(135deg, #ffc3a0 0%, #ffafbd 100%);
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+    }
+    .card {
+      position: relative;
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 8px 32px 0 rgba(0,0,0,0.2);
+      padding: 40px 60px;
+      text-align: center;
+      min-width: 350px;
+      animation: pop-in 1s cubic-bezier(.17,.67,.83,.67);
+    }
+    @keyframes pop-in {
+      0% {transform: scale(0);}
+      80% {transform: scale(1.1);}
+      100% {transform: scale(1);}
+    }
+    .cake {
+      font-size: 60px;
+      margin-bottom: 20px;
+      animation: bounce 1.2s infinite alternate;
+    }
+    @keyframes bounce {
+      to { transform: translateY(-12px);}
+    }
+    .greeting {
+      font-size: 2em;
+      color: #ff69b4;
+      margin-bottom: 12px;
+      letter-spacing: 2px;
+    }
+    .message {
+      font-size: 1.2em;
+      color: #555;
+    }
+    /* Confetti */
+    .confetti {
+      position: fixed;
+      width: 100vw;
+      height: 100vh;
+      left: 0; top: 0;
+      pointer-events: none;
+      z-index: 99;
+    }
+    .confetti-piece {
+      position: absolute;
+      width: 10px;
+      height: 25px;
+      border-radius: 3px;
+      opacity: 0.7;
+    }
+  </style>
+</head>
+<body>
+  <canvas class="confetti"></canvas>
+  <div class="card">
+    <div class="cake">🎂</div>
+    <div class="greeting">Happy Birthday!</div>
+    <div class="message">Wishing you a magical day filled with joy and laughter!</div>
+  </div>
+  <script>
+    // Confetti Animation
+    const canvas = document.querySelector('.confetti');
+    const ctx = canvas.getContext('2d');
+    let pieces = [];
+    const colors = ['#ff69b4','#ffd700','#1e90ff','#98ff98','#ff8c00','#e066ff'];
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+    window.addEventListener('resize', resizeCanvas);
+    function createPiece() {
+      const x = Math.random() * canvas.width;
+      const y = -20;
+      const w = 10, h = 25;
+      const color = colors[Math.floor(Math.random() * colors.length)];
+      const speed = 1 + Math.random() * 3;
+      const angle = Math.random() * Math.PI;
+      return {x, y, w, h, color, speed, angle, sway: Math.random() * 2};
+    }
+    function drawPiece(p) {
+      ctx.save();
+      ctx.translate(p.x, p.y);
+      ctx.rotate(p.angle);
+      ctx.fillStyle = p.color;
+      ctx.fillRect(-p.w/2, -p.h/2, p.w, p.h);
+      ctx.restore();
+    }
+    function update() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      pieces.forEach((p) => {
+        p.y += p.speed;
+        p.x += Math.sin(p.y / 20) * p.sway;
+        p.angle += 0.02;
+        drawPiece(p);
+      });
+      pieces = pieces.filter(p => p.y < canvas.height + 30);
+      while (pieces.length < 100) {
+        pieces.push(createPiece());
+      }
+      requestAnimationFrame(update);
+    }
+    resizeCanvas();
+    update();
+  </script>
+</body>
+</html>
