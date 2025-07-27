@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Peafowl - Wikipedia</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="wiki-navbar">
+    <div class="wiki-navbar-left">
+      <button class="wiki-hamburger" aria-label="Open menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <img src="favicon.jpg" alt="Wikipedia Logo" class="wiki-local-logo">
+      <div class="wiki-header-texts">
+        <img class="wiki-wordmark" src="https://en.wikipedia.org/static/images/mobile/copyright/wikipedia-wordmark-en.svg" alt="Wikipedia wordmark">
+        <img class="wiki-tagline" src="https://en.wikipedia.org/static/images/mobile/copyright/wikipedia-tagline-en.svg" alt="The free encyclopedia">
+      </div>
+    </div>
+    <form class="wiki-search" onsubmit="showArticle(); return false;">
+      <input id="searchInput" type="text" placeholder="Search Wikipedia...">
+      <button type="submit"><b>Search</b></button>
+    </form>
+    <div class="wiki-navbar-links">
+      <a href="#">Donate</a>
+      <a href="#">Create account</a>
+      <a href="#">Log in</a>
+      <span class="wiki-navbar-dots">•••</span>
+    </div>
+  </header>
+
+  <div class="container">
+    <nav class="sidebar">
+      <h3>Contents</h3>
+      <ul>
+        <li><a href="#description">Description</a></li>
+        <li><a href="#iridescence">Iridescence and coloration</a></li>
+        <li><a href="#courtship">Courtship</a></li>
+        <li><a href="#evolution">Evolution</a></li>
+        <li><a href="#diet">Diet</a></li>
+        <li><a href="#cultural">Cultural significance</a></li>
+      </ul>
+      <h3>See also</h3>
+      <ul>
+        <li><a href="#">Indian peafowl</a></li>
+        <li><a href="#">Green peafowl</a></li>
+        <li><a href="#">Congo peafowl</a></li>
+      </ul>
+    </nav>
+    <main class="content">
+      <div class="infobox">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Peacock_Plumage.jpg/250px-Peacock_Plumage.jpg" alt="Indian peacock">
+        <b>Peafowl</b><br>
+        Genus: <i>Pavo</i>, <i>Afropavo</i><br>
+        Family: <i>Phasianidae</i><br>
+        Species: Indian peafowl, Green peafowl, Congo peafowl
+      </div>
+      <h1 class="firstHeading">Peafowl</h1>
+      <p>
+        <b>Peafowl</b> is a common name for two bird species of the genus <i>Pavo</i> and one species of the closely related genus <i>Afropavo</i> within the tribe Pavonini of the family Phasianidae (the pheasants and their allies). Male peafowl are referred to as <b>peacocks</b>, and female peafowl as <b>peahens</b>.<br>
+        The two Asiatic species are the Indian peafowl and green peafowl. The third is the Congo peafowl. Male peafowl are known for their extravagant plumage and piercing calls.
+      </p>
+
+      <div class="peacock-images">
+        <img class="article-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/The_Magnificent_Peafowl.jpg/250px-The_Magnificent_Peafowl.jpg" alt="Magnificent Peafowl">
+        <img class="article-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Female_Pefowl_001.jpg/250px-Female_Pefowl_001.jpg" alt="Female Peafowl">
+      </div>
+      <h2 id="description">Description</h2>
+      <p>The <b>Indian peacock</b> (<i>Pavo cristatus</i>) has iridescent blue and green plumage, with males notably longer than females due to their tail coverts, called a 'train', covered in eyespots. Peahens (females) are duller, with grey, brown, and green coloring. Green peafowl males (<i>Pavo muticus</i>) have green and gold plumage with bluish-black wings, and both males and females have spurs. The <b>Congo peacock</b> (<i>Afropavo congensis</i>) male uses his actual tail feathers, which are much shorter and less colorful, unlike the elaborate feather displays by Indian and green peafowls.</p>
+      <div class="clear"></div>
+
+      <h2 id="iridescence">Iridescence and structural coloration</h2>
+      <p>The brilliant colors of peafowl plumage are mainly <em>structural</em>, not pigment-based. <b>Optical interference</b> from nanostructures in feather barbules creates the characteristic iridescence, changing with viewing angle. Brown feathers are created from a mix of red and blue caused by these structural effects.</p>
+
+      <h2 id="courtship">Courtship</h2>
+      <p>In courtship displays, the peacock places himself at an ideal angle to sunlight to best show off his iridescent train to the peahen. The train is fanned and vibrated to draw her attention, with females evaluating not only train size but also coloration and display angle.</p>
+
+      <h2 id="evolution">Evolution and selection</h2>
+      <p><b>Charles Darwin</b> proposed that peacock trains evolved through sexual selection, while the "handicap principle" suggests brilliant trains honestly signal male fitness. Different studies show both train display and other behaviors affect mate choice.</p>
+
+      <h2 id="diet">Diet</h2>
+      <p>Peafowl are omnivores, eating plants, flower petals, insects, reptiles, amphibians, and more. They forage mostly in the early morning or at dusk, and are not picky in what they eat.</p>
+
+      <h2 id="cultural">Cultural significance</h2>
+      <p>The peafowl features prominently in multiple cultures: It is India's national bird (and sacred in Hinduism), appears in Buddhist and ancient Greek stories, and is associated with immortality in Christianity due to its beautiful plumage.</p>
+    </main>
+    <aside class="appearance-panel">
+      <div class="appearance-header">
+        <span>Appearance</span>
+        <button class="appearance-hide">hide</button>
+      </div>
+      <div class="appearance-section">
+        <div class="appearance-label">Text</div>
+        <label><input type="radio" name="text-size" checked> Small</label>
+        <label><input type="radio" name="text-size"> Standard</label>
+        <label><input type="radio" name="text-size"> Large</label>
+      </div>
+      <div class="appearance-section">
+        <div class="appearance-label">Width</div>
+        <label><input type="radio" name="width" checked> Standard</label>
+        <label><input type="radio" name="width"> Wide</label>
+      </div>
+      <div class="appearance-section">
+        <div class="appearance-label">Color (beta)</div>
+        <label><input type="radio" name="color" checked> Automatic</label>
+        <label><input type="radio" name="color"> Light</label>
+        <label><input type="radio" name="color"> Dark</label>
+      </div>
+    </aside>
+  </div>
+
+  <footer class="wiki-footer">
+    <p>Wikipedia is hosted by the <a href="https://www.wikimediafoundation.org/">Wikimedia Foundation</a>, a non-profit organization that also hosts <a href="https://commons.wikimedia.org/">Wikimedia Commons</a> and other free knowledge projects.</p>
+  </footer>
+  <script>
+document.addEventListener('DOMContentLoaded', function() {
+
+  document.querySelectorAll('input[name="text-size"]').forEach(radio => {
+    radio.addEventListener('change', function() {
+      document.body.classList.remove('text-small', 'text-standard', 'text-large');
+      if (this.nextSibling.textContent.includes('Small')) document.body.classList.add('text-small');
+      if (this.nextSibling.textContent.includes('Standard')) document.body.classList.add('text-standard');
+      if (this.nextSibling.textContent.includes('Large')) document.body.classList.add('text-large');
+    });
+  });
+
+
+  document.querySelectorAll('input[name="width"]').forEach(radio => {
+    radio.addEventListener('change', function() {
+      document.body.classList.remove('width-standard', 'width-wide');
+      if (this.nextSibling.textContent.includes('Standard')) document.body.classList.add('width-standard');
+      if (this.nextSibling.textContent.includes('Wide')) document.body.classList.add('width-wide');
+    });
+  });
+
+
+  document.querySelectorAll('input[name="color"]').forEach(radio => {
+    radio.addEventListener('change', function() {
+      document.body.classList.remove('color-auto', 'color-light', 'color-dark');
+      if (this.nextSibling.textContent.includes('Automatic')) document.body.classList.add('color-auto');
+      if (this.nextSibling.textContent.includes('Light')) document.body.classList.add('color-light');
+      if (this.nextSibling.textContent.includes('Dark')) document.body.classList.add('color-dark');
+    });
+  });
+});
+</script>
+</body>
+</html>
