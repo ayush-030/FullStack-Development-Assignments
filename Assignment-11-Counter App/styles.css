@@ -1,0 +1,87 @@
+/* Base setup */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  color: #fff;
+  user-select: none;
+}
+
+/* Container styling */
+.container {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  padding: 40px 60px;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  text-align: center;
+  width: 320px;
+}
+
+/* Heading */
+h1 {
+  margin-bottom: 30px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+/* Counter number */
+.counter {
+  font-size: 5rem;
+  font-weight: 900;
+  margin-bottom: 40px;
+  text-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Buttons container */
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* General button style */
+.buttons button {
+  flex: 1;
+  padding: 15px 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgb(0 0 0 / 0.15);
+}
+
+/* Individual button colors */
+#increment {
+  background: #48c774;
+  color: #fff;
+}
+#increment:hover {
+  background: #3ea666;
+  box-shadow: 0 6px 20px #3ea666aa;
+}
+
+#decrement {
+  background: #ff3860;
+  color: #fff;
+}
+#decrement:hover {
+  background: #cc2e4a;
+  box-shadow: 0 6px 20px #cc2e4aaa;
+}
+
+#reset {
+  background: #209cee;
+  color: #fff;
+}
+#reset:hover {
+  background: #1076d6;
+  box-shadow: 0 6px 20px #1076d6aa;
+}
