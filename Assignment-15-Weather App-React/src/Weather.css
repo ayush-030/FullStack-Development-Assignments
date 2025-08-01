@@ -1,0 +1,52 @@
+.weather-container {
+  background: linear-gradient(135deg, #6bc1ff 0%, #4364f7 100%);
+  border-radius: 20px;
+  box-shadow: 0 4px 24px rgba(67, 100, 247, 0.18);
+  padding: 32px 24px;
+  max-width: 340px;
+  margin: 60px auto;
+  text-align: center;
+  color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.city-input {
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  margin-right: 8px;
+  outline: none;
+  width: 60%;
+  font-size: 16px;
+}
+
+.search-btn {
+  padding: 8px 16px;
+  background: #fff;
+  color: #4364f7;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+.search-btn:hover {
+  background: #e4eaff;
+}
+
+.weather-info {
+  margin-top: 28px;
+  animation: fadeIn 0.6s;
+}
+.temp {
+  font-size: 2.8rem;
+  font-weight: 600;
+}
+.error {
+  color: #ff8080;
+  font-weight: bold;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}

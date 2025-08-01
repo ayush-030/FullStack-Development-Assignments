@@ -66,3 +66,44 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;   
+  align-items: center;        
+  background: linear-gradient(135deg, #e4eaff 0%, #c6f0ff 100%);
+}
+.weather-container {
+  background: linear-gradient(135deg, #74ebd5 0%, #4364f7 100%);
+  border-radius: 28px;
+  box-shadow: 0 6px 32px 0 rgba(67, 100, 247, 0.16);
+  padding: 38px 32px;
+  max-width: 370px;
+  width: 90%;
+  text-align: center;
+  color: #fff;
+  font-family: 'Segoe UI', 'Inter', 'Roboto', sans-serif;
+  transition: box-shadow 0.3s;
+  margin: 0 auto;
+}
+
+.weather-container:hover {
+  box-shadow: 0 12px 48px rgba(67, 100, 247, 0.25);
+}
+
+.weather-info img {
+  margin: 10px 0 16px 0;
+}
+@media (max-width: 500px) {
+  .weather-container {
+    padding: 18px 8px;
+    max-width: 95vw;
+  }
+
+  .city-input {
+    width: 55%;
+    min-width: 70px;
+    font-size: 15px;
+  }
+}
