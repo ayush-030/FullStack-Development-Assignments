@@ -1,5 +1,5 @@
 # Live Demo
-https://full-stack-development-assignments.vercel.app/
+https://ayush-react-counter-app.vercel.app/
 
 # React + Vite
 
